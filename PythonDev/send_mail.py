@@ -2,8 +2,9 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-username ="bill.kobbyacc@gmail.com"
-password ='Kobby@123'
+username ="<username>"
+password ='<password>'
+
 
 
 
@@ -19,7 +20,7 @@ def send_mail(text="Email body", subject="Hello Kobby",from_email =username,to_e
     txt_part = MIMEText(text,'plain')
     msg.attach(txt_part)
 
-    html_part = MIMEText("<h1>Could this working</h1>",'html')
+    html_part = MIMEText("<h1>We just added an h1 tag header</h1>",'html')
     msg.attach(html_part)
 
     msgStr =msg.as_string()
